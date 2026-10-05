@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevOps Web App</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f6f8;
+               display: flex; justify-content: center; align-items: center;
+               height: 100vh; margin: 0; }
+        .card { background: #fff; padding: 2rem 3rem; border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0,0,0,.15); text-align: center;
+                width: 320px; }
+        h1 { color: #2c3e50; margin-bottom: .25rem; }
+        p.sub { color: #7f8c8d; margin-top: 0; }
+        label { display: block; margin: 1.25rem 0 .35rem; color: #34495e;
+                font-weight: bold; }
+        input[type=text] { width: 100%; padding: .6rem; border: 1px solid #bdc3c7;
+                border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
+        button { margin-top: 1rem; width: 100%; padding: .65rem; font-size: 1rem;
+                background: #2980b9; color: #fff; border: none;
+                border-radius: 6px; cursor: pointer; }
+        button:hover { background: #21618c; }
+        .stack { margin-top: 1.5rem; font-size: .8rem; color: #95a5a6; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>DevOps Pipeline</h1>
+        <p class="sub">Git &middot; GitHub &middot; Jenkins &middot; Maven &middot;
+            Selenium &middot; Docker &middot; Docker Hub</p>
+
+        <form action="greet" method="get">
+            <label for="username">Your name</label>
+            <input type="text" id="username" name="username"
+                   placeholder="Enter your name">
+            <button id="greetBtn" type="submit">Greet Me</button>
+        </form>
+
+        <p class="stack">Built and delivered by an automated CI/CD pipeline</p>
+    </div>
+</body>
+</html>
