@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         DOCKERHUB = credentials('dockerhub-credentials')
-        IMAGE_NAME = 'YOUR_DOCKERHUB_USERNAME/devops-webapp'
+        IMAGE_NAME = 'mayurgole1429-ai/devops-webapp'
     }
 
     options {
@@ -19,7 +19,7 @@ pipeline {
         stage('1. Checkout') {
             steps {
                 checkout scmGit(branches: [[name: '*/main']],
-                                userRemoteConfigs: [[url: 'https://github.com/YOUR_GITHUB_USERNAME/devops-webapp.git']])
+                                userRemoteConfigs: [[url: 'https://github.com/mayurgole1429-ai/devops-webapp.git']])
                 echo "Checked out revision: ${env.GIT_COMMIT}"
             }
         }

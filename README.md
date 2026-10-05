@@ -33,7 +33,7 @@ Already implemented and verified: `mvn clean verify` → `BUILD SUCCESS`, `Tests
 Push to GitHub:
 
 ```bash
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/devops-webapp.git
+git remote add origin https://github.com/mayurgole1429-ai/devops-webapp.git
 git push -u origin main
 ```
 
@@ -55,7 +55,7 @@ The pipeline's *Build (Maven)* stage runs `mvn clean compile`; the *Test (Seleni
 
 *New Item → Pipeline*, name it `devops-pipeline` → **Pipeline section**:
 - Definition: *Pipeline script from SCM*
-- SCM: Git, repository URL: `https://github.com/YOUR_GITHUB_USERNAME/devops-webapp.git`, branch: `*/main`
+- SCM: Git, repository URL: `https://github.com/mayurgole1429-ai/devops-webapp.git`, branch: `*/main`
 - Script path: `Jenkinsfile`
 
 ## 8–9. Docker image + Docker Hub push
