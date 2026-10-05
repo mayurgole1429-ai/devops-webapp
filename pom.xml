@@ -74,7 +74,9 @@
                         <contextPath>/</contextPath>
                     </webApp>
                     <httpConnector>
-                        <port>8080</port>
+                        <!-- 8085, not 8080: Jenkins itself listens on 8080 on this machine,
+                             so the IT-test Jetty must use a different port or `mvn verify` fails to bind. -->
+                        <port>8085</port>
                     </httpConnector>
                     <stopKey>stop</stopKey>
                     <stopPort>9999</stopPort>
@@ -108,7 +110,7 @@
                         <include>**/*IT.java</include>
                     </includes>
                     <systemPropertyVariables>
-                        <app.url>http://localhost:8080/</app.url>
+                        <app.url>http://localhost:8085/</app.url>
                     </systemPropertyVariables>
                 </configuration>
                 <executions>
